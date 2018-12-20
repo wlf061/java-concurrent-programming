@@ -16,7 +16,7 @@ public class TimeLock implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            if(lock.isHeldByCurrentThread())
+            //if(lock.isHeldByCurrentThread())
                 lock.unlock();
         }
     }

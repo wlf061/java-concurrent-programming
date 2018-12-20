@@ -2,6 +2,9 @@ package ch3.s1;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+/***
+ * 公平锁: 性能相对于非公平锁 性能要差很多,
+ */
 public class FairLock implements Runnable {
     public static ReentrantLock fairLock = new ReentrantLock(true);
 //    public static ReentrantLock fairLock = new ReentrantLock();
