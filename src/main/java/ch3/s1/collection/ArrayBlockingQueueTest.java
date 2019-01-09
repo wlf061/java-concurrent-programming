@@ -3,12 +3,8 @@ package ch3.s1.collection;
 import java.util.Iterator;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
- *
  * @author nancy.wang
  * @Time 2019/1/3
  */
@@ -41,7 +37,7 @@ public class ArrayBlockingQueueTest {
             while (i++ < 4) {
                 // “线程名” + "-" + "序号"
                 String val = Thread.currentThread().getName()+i;
-                queue.offer(val);
+                System.out.println(queue.offer(val));
                 printAll();
             }
         }

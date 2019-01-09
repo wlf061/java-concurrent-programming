@@ -10,7 +10,7 @@ public class ThreadPoolDemo {
         public void run() {
             System.out.println(System.currentTimeMillis() + " Thread id:" + Thread.currentThread().getId());
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -20,7 +20,7 @@ public class ThreadPoolDemo {
     // 前5个线程执行时间和后5个比差了1秒钟
     public static void main(String[] args) {
         MyTask task = new MyTask();
-        ExecutorService es = Executors.newFixedThreadPool(5);
+        ExecutorService es = Executors.newFixedThreadPool(2);
         for (int i = 0; i < 10; i++) {
             es.submit(task);
         }
