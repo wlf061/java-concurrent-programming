@@ -18,6 +18,7 @@
     - 将所有属性私有，并设为final，确保数据只能被构造一次，类不能有子类
     - 确保没有子类可以重载修改他
     - 有一个可以创建完整对象的构造函数
+    - final 类不能被继承, final 方法不能被重写，inal成员变量表示常量，只能被赋值一次，赋值后值不再改变
 - [Product](https://github.com/guanpengchn/java-concurrent-programming/blob/master/src/main/java/ch5/s2/Product.java)，内部类没被调用前不会被加载
 - 基本数据类型和String类型是不变模式实现的
   
@@ -95,6 +96,12 @@ public class Sequence extends RhsPadding{
 
 - 主要的几个类：Runnable，Future，RunnableFuture，FutureTask，Sync，Callable，类图见书中
 - [代码](https://github.com/guanpengchn/java-concurrent-programming/blob/master/src/main/java/ch5/s5/s3)
+- 调用流程：
+  1. 定义自己的类，实现Callable 接口
+  2. 构造一个FutureTask 实例 future
+  3. 提交给线程池。
+  4. 接下来处理自己的业务逻辑
+  5. 业务逻辑处理完之后，调用future.get获取之前的结果。
 
 ### 5.6　并行流水线	212
 

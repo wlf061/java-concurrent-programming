@@ -4,6 +4,7 @@ public final class Product {
     private final String no;
     private final String name;
     private final double price;
+    private Integer testInt;
 
     public Product(String no, String name, double price) {
         this.no = no;
